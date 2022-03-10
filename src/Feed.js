@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import './Feed.css'
 import CreateSharpIcon from '@mui/icons-material/CreateSharp';
 import InputOption from './InputOption';
@@ -7,18 +7,18 @@ import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 import Post from './Post';
-import {db} from './firebase';
+// import {db} from './firebase';
 // import {firebase} from "./firebase";
 // import firebase from 'firebase/compat';
 // import firebase from "firebase/app";
 // import firebase from './firebase';
 // import Firebase from './firebase';
 import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
-import { AiFillBank,AiFillAndroid,AiFillLinkedin,AiFillMacCommand ,AiFillWindows,AiFillSlackSquare} from "react-icons/ai";
+import { AiFillBank,AiFillLinkedin,AiFillMacCommand ,AiFillWindows,AiFillSlackSquare} from "react-icons/ai";
 
 function Feed() {
   const [input,setInput]=useState('');
-  const [posts,setPosts] = useState([]);
+//   const [posts,setPosts] = useState([]);
   
 //  useEffect(() => {
 //    db.collection("posts").onSnapshot(snapShot =>(
@@ -65,9 +65,9 @@ function Feed() {
         </div>
 
         {/* post */}
-        {posts.map(({id,data:{name,description,message,photoUrl}})=>{
+        {/* {posts.map(({id,data:{name,description,message,photoUrl}})=>{
             <Post key={id} name={name} description={description} message={message} photoUrl={photoUrl} />
-        })}
+        })} */}
         <Post name='Abhishek' description='senior drupal dev' message= 'deepak is a very active learner and curious to do his first internship' Icon={<AiFillSlackSquare/>}/>
         <Post name='Deepak' description='reactjs dev' message= 'he is very proficience in english communication and having a skill of adept in everthing  ' Icon={<AiFillBank/>} />
         <Post name='Aayush' description='mern stack dev' message= 'Deepak is very good in mern stack and aspire to do his first internship . i am doing work with him' Icon={<AiFillLinkedin/>}/>
